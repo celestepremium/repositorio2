@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Inicio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #111 0%, #000 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: backgroundMove 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes backgroundMove {
+      0% {
+        background-position: top left;
+      }
+      100% {
+        background-position: bottom right;
+      }
+    }
+
+    h1 {
+      color: gold;
+      font-size: 3em;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .boton {
+      background-color: transparent;
+      color: gold;
+      padding: 15px 40px;
+      margin: 15px;
+      border: 2px solid gold;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .boton::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: gold;
+      z-index: 0;
+      transition: all 0.5s ease;
+    }
+
+    .boton:hover::before {
+      left: 0;
+    }
+
+    .boton span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .boton:hover {
+      color: black;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px gold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .boton {
+        font-size: 1em;
+        padding: 12px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido a esta pagina</h1>
+
+  <a class="boton" href="https://celestepremium.github.io/trilogia_tomb_raider/" target="_blank"><span>Animaciones</span></a>
+  <a class="boton" href="https://celestepremium.github.io/chat_bot/" target="_blank"><span>Chat Bot</span></a>
+  <a class="boton" href=https://papeleriadany.free.nf target="_blank"><span>papeleria</span></a>
+</body>
+</html>
